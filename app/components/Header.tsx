@@ -55,12 +55,12 @@ export default function Header() {
 
         {/* Right Side Actions */}
         <div className="flex items-center gap-4">
-          <button className="hover:opacity-80 transition-opacity duration-200 ease-in-out text-black">
+          {/* <button className="hover:opacity-80 transition-opacity duration-200 ease-in-out text-black">
             <span className="material-symbols-outlined">shopping_cart</span>
           </button>
           <button className="hover:opacity-80 transition-opacity duration-200 ease-in-out text-black">
             <span className="material-symbols-outlined">person</span>
-          </button>
+          </button> */}
 
           {/* Hamburger Menu Toggle Button (Visible only on mobile) */}
           <button 
