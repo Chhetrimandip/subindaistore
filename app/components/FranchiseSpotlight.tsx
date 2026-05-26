@@ -9,25 +9,25 @@ const mainBranches = [
       phone: "9804141253", 
       name: "Pokhara", 
       mapLink: "https://maps.app.goo.gl/vpFUURr2YRJSTxn47" 
-    },
-    { 
-      location: "Damauli, Durga mandir line", 
-      phone: "9805831917", 
-      name: "Damauli", 
-      mapLink: "https://maps.app.goo.gl/Mds9XQhjwBbZH3Gt8" 
-    },
-    { 
-      location: "Baglung, Jeep park", 
-      phone: "9840684278", 
-      name: "Baglung", 
-      mapLink: "https://maps.app.goo.gl/CEFiG1M5x39mZXKp6" 
-    },
-    { 
-      location: "Besisahar", 
-      phone: "", 
-      name: "Besisahar", 
-      mapLink: "https://maps.app.goo.gl/QvuqaiFVyDnThFWZ6" 
-    },
+    }
+    // { 
+    //   location: "Damauli, Durga mandir line", 
+    //   phone: "9805831917", 
+    //   name: "Damauli", 
+    //   mapLink: "https://maps.app.goo.gl/Mds9XQhjwBbZH3Gt8" 
+    // },
+    // { 
+    //   location: "Baglung, Jeep park", 
+    //   phone: "9840684278", 
+    //   name: "Baglung", 
+    //   mapLink: "https://maps.app.goo.gl/CEFiG1M5x39mZXKp6" 
+    // },
+    // { 
+    //   location: "Besisahar", 
+    //   phone: "", 
+    //   name: "Besisahar", 
+    //   mapLink: "https://maps.app.goo.gl/QvuqaiFVyDnThFWZ6" 
+    // },
   ];
 
   const branches = [

@@ -2,18 +2,18 @@ const badges = [
   {
     icon: "public",
     title: "Global Imports",
-    description: "We source directly from premium manufacturers in Europe and the Americas to ensure authenticity.",
+    description: "We source directly from premium manufacturers to ensure authenticity.",
   },
   {
     icon: "verified",
     title: "Certified Quality",
     description: "Every item in our boutique is inspected for professional performance standards.",
   },
-  {
-    icon: "support_agent",
-    title: "Expert Guidance",
-    description: "Our consultants are former athletes trained to help you choose the right equipment.",
-  },
+  // {
+  //   icon: "support_agent",
+  //   title: "Expert Guidance",
+  //   description: "Our consultants are former athletes trained to help you choose the right equipment.",
+  // },
 ];
 
 function BadgeCard({ badge }: { badge: (typeof badges)[0] }) {
