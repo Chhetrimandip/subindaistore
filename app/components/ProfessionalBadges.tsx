@@ -7,13 +7,13 @@ const badges = [
   {
     icon: "verified",
     title: "Certified Quality",
-    description: "Every item in our boutique is inspected for professional performance standards.",
+    description: "Every item in our store is inspected for professional performance standards.",
   },
-  // {
-  //   icon: "support_agent",
-  //   title: "Expert Guidance",
-  //   description: "Our consultants are former athletes trained to help you choose the right equipment.",
-  // },
+  {
+    icon: "support_agent",
+    title: "Expert Guidance",
+    description: "Our consultants are former athletes trained to help you choose the right equipment.",
+  },
 ];
 
 function BadgeCard({ badge }: { badge: (typeof badges)[0] }) {
