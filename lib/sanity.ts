@@ -45,6 +45,7 @@ export async function getProductBySlug(slug: string) {
       price,
       description,
       "imageUrl": image.asset->url,
+      "gallery": gallery[].asset->url,
       "category": category->{title},
       sizes
     }`,

@@ -1,5 +1,6 @@
 import { getProductBySlug, getProducts } from "@/lib/sanity";
 import Link from "next/link";
+import ProductGallery from "@/app/components/ProductGallery";
 
 interface Product {
   _id: string;
@@ -8,6 +9,7 @@ interface Product {
   price: number;
   description?: string;
   imageUrl?: any;
+  gallery?: (string | null)[];
   sizes?: string[];
   category?: { title: string };
 }
@@ -37,50 +39,18 @@ export default async function ProductPage({
     );
   }
 
-  // Collect thumbnail images — use same image repeated if no extras
-  const thumbnails = [
-    product.imageUrl,
-    product.imageUrl,
-    product.imageUrl,
-    product.imageUrl,
-  ].filter(Boolean);
+  // Main image first, then any extra gallery images (deduped)
+  const images = Array.from(
+    new Set([product.imageUrl, ...(product.gallery ?? [])].filter(Boolean))
+  ) as string[];
 
   return (
     <main className="pt-24 pb-20 px-4 md:px-20 max-w-[1280px] mx-auto">
       {/* ── Product Details ── */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20">
 
-        {/* LEFT — Image + Thumbnails */}
-        <div className="flex flex-col gap-4">
-          {/* Main image */}
-          <div className="bg-[#1a1a2e] rounded-xl overflow-hidden aspect-[4/5] flex items-center justify-center">
-            {product.imageUrl && (
-              <img
-                alt={product.name}
-                src={product.imageUrl}
-                className="w-full h-full object-contain p-6"
-              />
-            )}
-          </div>
-
-          {/* Thumbnails */}
-          {/* {thumbnails.length > 0 && (
-            <div className="grid grid-cols-4 gap-2">
-              {thumbnails.map((thumb, i) => (
-                <div
-                  key={i}
-                  className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square flex items-center justify-center cursor-pointer border-2 border-transparent hover:border-green-500 transition-all"
-                >
-                  <img
-                    alt={`${product.name} view ${i + 1}`}
-                    src={thumb}
-                    className="w-full h-full object-contain p-2"
-                  />
-                </div>
-              ))}
-            </div>
-          )} */}
-        </div>
+        {/* LEFT — Image gallery */}
+        <ProductGallery images={images} name={product.name} />
 
         {/* RIGHT — Product Info */}
         <div className="flex flex-col justify-start gap-4">
